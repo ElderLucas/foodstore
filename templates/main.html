@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="A portfolio template that uses Material Design Lite.">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+		<title>Maria Inês</title>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+		<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.grey-pink.min.css" />
+		<link rel="stylesheet" href="/static/styles.css" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	</head>
+
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+		<!-- Caso estejamos usando um Navegador, Exibe-se uma barra horizontal -->
+        <header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header">
+            
+            <div class="mdl-layout__header-row portfolio-logo-row">
+                <span class="mdl-layout__title">
+                    <div class="portfolio-logo"></div>
+                </span>
+            </div>
+
+            <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
+                <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+					<a class="mdl-navigation__link" href="{{url_for('showVideos')}}">Videos</a>
+					<a class="mdl-navigation__link" href="{{url_for('about')}}">Sobre Maria Ines Artes</a>
+                    <a class="mdl-navigation__link" href="{{url_for('shopping')}}">SHOP</a>
+                </nav>
+            </div>
+
+        </header>
+
+        <!-- Caso seja um Smartphone, cria-se uma Nav-Bar Lateral Embutida -->
+        <div class="mdl-layout__drawer mdl-layout--small-screen-only">
+            <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+				<a class="mdl-navigation__link" href="{{url_for('showVideos')}}">Artesanatos</a>
+				<a class="mdl-navigation__link" href="{{url_for('about')}}">Sobre Maria Ines Artes</a>
+                <a class="mdl-navigation__link" href="{{url_for('shopping')}}">SHOP</a>
+            </nav>
+        </div>
+
+		<!-- Bloco Principal do Python -->
+        <!-- <main class="mdl-layout__content">
+
+            <div class="container">
+				{% block content %}
+				{% endblock %}
+			</div>
+
+            <footer class="mdl-mini-footer">
+                <div class="mdl-mini-footer__left-section">
+                    <div class="mdl-logo">Artesanatos Maria Inês</div>
+                </div>
+                <div class="mdl-mini-footer__right-section">
+                    <ul class="mdl-mini-footer__link-list">
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Privacy & Terms</a></li>
+                    </ul>
+                </div>
+            </footer>
+        </main> -->
+
+        <main class="mdl-layout__content">
+            <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--8-col">
+                    <div class="demo-card-square mdl-card mdl-shadow--2dp">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/hCm-sas90us" frameborder="0" allowfullscreen>
+                        </iframe>
+
+                        <div class="mdl-card__title mdl-card--expand">
+                            <h2 class="mdl-card__title-text">Flor Kansashi</h2>
+                        </div>
+
+                        <div class="mdl-card__supporting-text">
+                            Aprenda a Fazer essa linda Flor Kansashi. Para fazê-la, usamos fita de Cetim
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                                love
+                            </a>
+                        </div>
+                    </div>                    
+                </div>
+
+                <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet">
+                    <div class="demo-card-square mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title mdl-card--expand">
+                            <h2 class="mdl-card__title-text">Tulipa de Tecido</h2>
+                        </div>
+                    
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/SqakWs70vkc" frameborder="0" allowfullscreen>
+                        </iframe>
+                    
+                        <div class="mdl-card__supporting-text">
+                            A tulipa de tecido é um lindo enfeite de mesa.
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                                love
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--4-col">
+                    <div class="demo-card-square mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title mdl-card--expand">
+                            <h2 class="mdl-card__title-text">Garrafa Craquelê</h2>
+                        </div>
+                        
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/7Ss_s52-Oqg" frameborder="0" allowfullscreen>
+                        </iframe>
+
+                        <div class="mdl-card__supporting-text">
+                            Nessa garrafa usamos a técnica de craquelagem em vidro.
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                                Love
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mdl-cell mdl-cell--4-col">
+                    <div class="demo-card-square mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title mdl-card--expand">
+                            <h2 class="mdl-card__title-text">Anjos Natalinos</h2>
+                        </div>
+                        
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/iqx2rMY7I0A" frameborder="0" allowfullscreen>
+                        </iframe>
+
+                        <div class="mdl-card__supporting-text">
+                            Nada mais legal que enfeitar a nossa casa para o Natal. Usando feltro, criamos um lindo anjo Natalino.
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                                Love
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mdl-cell mdl-cell--4-col">
+                    <div class="demo-card-square mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title mdl-card--expand">
+                            <h2 class="mdl-card__title-text">Guirlanda Natalina</h2>
+                        </div>
+                        
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/YpCOvTSQP1s" frameborder="0" allowfullscreen>
+                        </iframe>
+
+                        <div class="mdl-card__supporting-text">
+                            Nada mais legal que enfeitar a nossa casa para o Natal. Usando feltro, criamos um lindo anjo Natalino.
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                                Love
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mdl-cell mdl-cell--4-col">
+                    <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title mdl-card--expand">
+                            <h4>
+                                Próximo Vídeo<br>
+                                Sep 30, 2016<br>
+                                17pm
+                            </h4>
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                                Add to Calendar
+                            </a>
+                            <div class="mdl-layout-spacer"></div>
+                            <i class="material-icons">event</i>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </main>
+
+        <footer class="mdl-mini-footer">
+            <div class="mdl-mini-footer__left-section">
+                <div class="mdl-logo">
+                    Maria Ines Oliveira Artesanatos
+                </div>
+                <ul class="mdl-mini-footer__link-list">
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Privacy & Terms</a></li>
+                </ul>
+            </div>
+        </footer>
+
+    </div>
+    <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+</body>
+
+</html>
