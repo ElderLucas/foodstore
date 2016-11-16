@@ -45,7 +45,7 @@ virtualenv venv
 
 . venv/bin/activate
 
-pip install -r requirements.txt
+pip install -r requirements_foodstore.txt
 
 # Altere os Dados do DataBAse Caso Seja Necessário
 # python create_database.py
