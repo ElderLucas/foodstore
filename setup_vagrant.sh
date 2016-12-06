@@ -52,7 +52,6 @@ echo -n "PIP### Instalando Virtualenv"
 sudo virtualenv -p /usr/local/lib/python2.7.9/bin/python $(pwd)/venv
 
 # Crinado um ambiente virtual para a aplicação. Nesta versão será feito o upgrade do Python
-virtualenv venv
 . venv/bin/activate
 pip install -r requirements.txt
 . deactivate
