@@ -1,13 +1,10 @@
 #!/bin/bash
 ##################################################################################################################################
 #Entradas para o shell script
-<<<<<<< HEAD
 # Entrada $1 = Nome do arquivo WSGi
 # Entrada $2 = Path(caminho) para o Diretório de saída, que deve ficar dentro do diretório raiz do projeto.
-=======
 # Entrada $2 = Nome do arquivo WSGi
 # Entrada $3 = Path(caminho) para o Diretório de saída, que deve ficar dentro do diretório raiz do projeto.
->>>>>>> 29e3d00dccf2c6694eda08e555821ebc023e7fd9
 ##################################################################################################################################
 file_name=$1
 output_dir=$2
