@@ -44,6 +44,7 @@ make install
 echo -n "Instalando Gerenciador de Pacotes Python"
 apt-get install python-pip
 sudo pip install -U pip setuptools
+sudo pip install virtualenv
 
 # Cria-se um virtual environment chamado venv, dentro do diretório atual "$(pwd)/", e atrela-se a ele a versão 2.7.9 do Python
 # Essa versao do Python suporta SSL para conexoes seguras. 
