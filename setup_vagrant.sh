@@ -1,10 +1,10 @@
 echo "### EXECUTANDO UM SCRIPT DE INSTALAÇÃO DO VAGRANT ###"
 
 apt-get update  #To get the latest package lists
-
 # Instalando o Git, caso não esteja instalado na Máquina
 sudo apt-get install git
 # Configurando o github
+
 echo -n "Digite o Github User Email > "
 read git_user_email
 echo "Seu Git User Email: $git_user_email"
@@ -44,17 +44,17 @@ make install
 
 echo -n "Instalando Gerenciador de Pacotes Python"
 apt-get install python-pip
-sudo pip install -U pip setuptools
+pip install -U pip setuptools
+pip install virtualenv
 
 # Cria-se um virtual environment chamado venv, dentro do diretório atual "$(pwd)/", e atrela-se a ele a versão 2.7.9 do Python
 # Essa versao do Python suporta SSL para conexoes seguras. 
 echo -n "PIP### Instalando Virtualenv"
-pip install virtualenv
 sudo virtualenv -p /usr/local/lib/python2.7.9/bin/python $(pwd)/venv
 
 # Crinado um ambiente virtual para a aplicação. Nesta versão será feito o upgrade do Python
 virtualenv venv
 . venv/bin/activate
 pip install -r requirements.txt
-. deactivate
+deactivate
 echo -n "PIP### requirements Instalados"
