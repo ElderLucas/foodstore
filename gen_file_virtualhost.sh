@@ -21,9 +21,11 @@ cat > $output_dir/$file_name".com.conf" << EOF1
 <VirtualHost *:80>
 
 	ServerName $domain_name
-
+	
     	WSGIScriptAlias / $(pwd)/$std_wsgi_name
-
+        WSGIDaemonProcess foodstoreapp user=foodstore group=sudo
+        WSGIProcessGroup foodstoreapp
+	
     	<Directory $(pwd)/>
         	Order deny,allow
         	Allow from all
