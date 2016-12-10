@@ -49,6 +49,7 @@ sudo pip install -U pip setuptools
 # Cria-se um virtual environment chamado venv, dentro do diretório atual "$(pwd)/", e atrela-se a ele a versão 2.7.9 do Python
 # Essa versao do Python suporta SSL para conexoes seguras. 
 echo -n "PIP### Instalando Virtualenv"
+pip install virtualenv
 sudo virtualenv -p /usr/local/lib/python2.7.9/bin/python $(pwd)/venv
 
 # Crinado um ambiente virtual para a aplicação. Nesta versão será feito o upgrade do Python
